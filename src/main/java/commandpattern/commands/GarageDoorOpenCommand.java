@@ -2,9 +2,9 @@ package commandpattern.commands;
 
 import commandpattern.vendorclasses.GarageDoor;
 
-public class GarageDoorCommand implements Command{
+public class GarageDoorOpenCommand implements Command{
     GarageDoor garageDoor;
-    public GarageDoorCommand (GarageDoor garageDoor) {
+    public GarageDoorOpenCommand (GarageDoor garageDoor) {
         this.garageDoor = garageDoor;
     }
     @Override

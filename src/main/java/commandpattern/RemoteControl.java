@@ -1,16 +1,30 @@
 package commandpattern;
 
 import commandpattern.commands.Command;
+import commandpattern.commands.NoCommand;
 
 public class RemoteControl {
-    Command command;
+    Command[] onCommands;
+    Command[] offCommands;
     public RemoteControl() {
-        
+        onCommands = new Command[7];
+        offCommands = new Command[7];
+        Command noCommand = new NoCommand();
+        for(int i=0;i<7;i++) {
+            onCommands[i] = noCommand;
+            offCommands[i] = noCommand;
+        }
     }
-    public void setCommand(Command command) {
-        this.command = command;
+    public void setCommand(int slot, Command onCommand, Command offCommand) {
+        onCommands[slot] = onCommand;
+        offCommands[slot] = offCommand;
     }
-    public void buttonPressed() {
-        this.command.execute();
+    public void onButtonPressed(int slot) {
+        onCommands[slot].execute();
     }
+    
+    public void offButtonPressed(int slot) {
+        offCommands[slot].execute();
+    }
+    
 }
