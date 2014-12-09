@@ -13,3 +13,12 @@ Simple Factory Pattern
 2. Added Pizza class and two subclasses Cheese and Peperoni implementing the Pizza class 
 3. The PizzaStore uses the Pizza class and its subclass 
 4. Moved the object creation code from PizzaStore to the SimpleFactory so that the PizzaStore is closed for modification. If any new objects are to be created, only the SimpleFactory code will have to change
+
+=====================
+Command Pattern
+---------------------
+1. Command Pattern with Queues
+2. Command Pattern with Logging
+3. Added Vendor Class Light, GarageDoor, Command interface, implemented the interface with vendor class commands and executed the commands from the remote control
+
+
